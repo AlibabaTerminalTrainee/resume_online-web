@@ -2,4 +2,4 @@
 
 ## Project setup
 ```
-npm install
+npm or yarn install
