@@ -3,9 +3,14 @@ node_modules
 /dist
 
 
+
 # local env files
 .env.local
 .env.*.local
+
+# Package Manager files
+package-lock.json
+yarn-lock.json
 
 # Log files
 npm-debug.log*
