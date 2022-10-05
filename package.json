@@ -1,6 +1,6 @@
 {
-  "name": "uni-preset-vue",
-  "version": "0.0.0",
+  "name": "resume_online-web",
+  "version": "1.0.0",
   "scripts": {
     "dev:app": "uni -p app",
     "dev:app-android": "uni -p app-android",
@@ -33,7 +33,8 @@
     "build:mp-weixin": "uni build -p mp-weixin",
     "build:quickapp-webview": "uni build -p quickapp-webview",
     "build:quickapp-webview-huawei": "uni build -p quickapp-webview-huawei",
-    "build:quickapp-webview-union": "uni build -p quickapp-webview-union"
+    "build:quickapp-webview-union": "uni build -p quickapp-webview-union",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@dcloudio/uni-app": "3.0.0-alpha-3060420220922001",
@@ -53,11 +54,27 @@
     "vuex": "^4.0.2"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
     "@dcloudio/types": "^3.0.13",
     "@dcloudio/uni-automator": "3.0.0-alpha-3060420220922001",
     "@dcloudio/uni-cli-shared": "3.0.0-alpha-3060420220922001",
     "@dcloudio/uni-stacktracey": "3.0.0-alpha-3060420220922001",
     "@dcloudio/vite-plugin-uni": "3.0.0-alpha-3060420220922001",
+    "cz-customizable": "^7.0.0",
+    "eslint": "^8.24.0",
+    "eslint-plugin-vue": "^9.6.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "sass": "^1.55.0",
     "vite": "^2.9.14"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,vue}": ["eslint --fix", "git add"]
   }
 }
