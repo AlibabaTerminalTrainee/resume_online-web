@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "start": "nodemon --exec npm run serve",
     "serve": "npm run dev:h5",
     "build": "npm run build:h5",
     "build:app-plus": "cross-env NODE_ENV=production UNI_PLATFORM=app-plus vue-cli-service uni-build",
@@ -76,6 +77,8 @@
   },
   "devDependencies": {
     "@babel/runtime": "~7.17.9",
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
     "@dcloudio/types": "^3.0.4",
     "@dcloudio/uni-automator": "^2.0.1-36420220922001",
     "@dcloudio/uni-cli-i18n": "^2.0.1-36420220922001",
@@ -91,21 +94,23 @@
     "@vue/cli-service": "~4.5.19",
     "babel-plugin-import": "^1.11.0",
     "cross-env": "^7.0.2",
-    "jest": "^25.4.0",
-    "mini-types": "*",
-    "miniprogram-api-typings": "*",
-    "postcss-comment": "^2.0.0",
-    "vue-template-compiler": "^2.6.11",
-    "@commitlint/cli": "^17.1.2",
-    "@commitlint/config-conventional": "^17.1.0",
     "cz-customizable": "^7.0.0",
     "eslint": "^8.24.0",
     "husky": "^8.0.1",
+    "jest": "^25.4.0",
     "lint-staged": "^13.0.3",
+    "mini-types": "*",
+    "miniprogram-api-typings": "*",
     "normalize.css": "^8.0.1",
-    "sass": "^1.55.0"
+    "postcss-comment": "^2.0.0",
+    "sass": "^1.55.0",
+    "sass-loader": "10.1.1",
+    "vue-template-compiler": "^2.6.11"
   },
-  "browserslist": ["Android >= 4.4", "ios >= 9"],
+  "browserslist": [
+    "Android >= 4.4",
+    "ios >= 9"
+  ],
   "resolutions": {
     "@babel/runtime": "~7.17.9"
   },
@@ -118,6 +123,9 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{js,vue}": ["eslint --fix", "git add"]
+    "src/**/*.{js,vue}": [
+      "eslint --fix",
+      "git add"
+    ]
   }
 }
