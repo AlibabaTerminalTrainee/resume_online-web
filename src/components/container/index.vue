@@ -1,43 +1,13 @@
 <template>
-  <view class="container-wrapper">
-    <view class="box-bg">
-      <uni-nav-bar
-        @clickLeft="clickLeft"
-        @clickRight="clickRight"
-        shadow
-        left-icon="left"
-        :right-text="rightText"
-        :title="title"
-      />
-    </view>
-    <slot></slot>
+  <view class="uni-flex uni-row">
+    <view class="flex-item uni-bg-red">A</view>
+    <view class="flex-item uni-bg-green">B</view>
+    <view class="flex-item uni-bg-blue">C</view>
   </view>
 </template>
 
 <script>
-export default {
-  props: {
-    rightText: {
-      type: String
-    },
-    title: {
-      type: String
-    }
-  },
-  data () {
-    return {}
-  },
-  methods: {
-    clickLeft () {
-      this.$router.back()
-    },
-    clickRight () {}
-  }
-}
+export default {}
 </script>
 
-<style scoped>
-.container-wrapper {
-  padding-bottom: 0.3125rem;
-}
-</style>
+<style lang="scss" scoped></style>

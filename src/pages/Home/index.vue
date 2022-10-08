@@ -1,17 +1,28 @@
 <template>
+  <!-- 导航栏 -->
   <view>
-    <formEditor></formEditor>
+    <!--  -->
   </view>
 </template>
-
 <script>
-import formEditor from '../../components/formEditor'
 export default {
-  name: 'Home',
-  components: {
-    formEditor
-  }
+  data () {
+    return {
+      dismissSecs: 10,
+      dismissCountDown: 0,
+      showDismissibleAlert: false
+    }
+  },
+  methods: {
+    countDownChanged (dismissCountDown) {
+      this.dismissCountDown = dismissCountDown
+    },
+    showAlert () {
+      this.dismissCountDown = this.dismissSecs
+    }
+  },
+  components: {}
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style></style>
