@@ -120,6 +120,7 @@ export default {
 
 <style lang="scss" scoped>
 .home-uni-row {
+  flex: 1;
   margin-top: 12.077rpx;
   display: block;
   /* #endif */
@@ -139,5 +140,6 @@ export default {
 .test-button {
   margin-top: 18.116rpx;
   background-color: $uni-primary;
+  font-size: 12.077rpx;
 }
 </style>
