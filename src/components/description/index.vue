@@ -1,15 +1,10 @@
 <template>
-  <uni-section title="基础卡片" type="line">
+  <uni-section title="在校经历" type="line">
     <uni-card :is-shadow="false">
       <view class="uni-form-item uni-column">
-        <view class="title">在校经历</view>
-        <view class="uni-textarea"
-          ><textarea
-            placeholder-style="color: #353535;"
-            placeholder="可以列出荣誉奖项,相关课程及成绩等"
-            @blur="bindTextAreaBlur"
-            auto-height
-        /></view>
+        <view class="title">可以列出荣誉奖项,相关课程及成绩等</view>
+        <view class="uni-textarea"></view>
+        <textarea @blur="bindTextAreaBlur" auto-height />
       </view>
     </uni-card>
   </uni-section>

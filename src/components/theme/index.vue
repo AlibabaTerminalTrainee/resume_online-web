@@ -1,11 +1,10 @@
 <template>
   <!-- 主题详情组件 -->
 
-  <view>
+  <view class="theme">
     <form @submit="formSubmit" @reset="formReset" class="uni-form">
       <!-- 学校 -->
-      <uni-section title="school" type="line" padding>
-        <text class="uni-subtitle">学校：</text>
+      <uni-section title="学校" type="line" padding>
         <uni-easyinput
           class="uni-mt-5"
           trim="all"
@@ -17,7 +16,6 @@
       <!-- 学历 -->
       <uni-section title="学历" type="line">
         <view class="uni-form-item uni-column">
-          <view class="uni-subtitle">学历</view>
           <view
             ><uni-data-select
               class="uni-mt-5"
@@ -29,8 +27,8 @@
         </view>
       </uni-section>
       <!-- 学院 -->
-      <uni-section title="college" type="line" padding>
-        <text class="uni-subtitle">学院：</text>
+      <uni-section title="学院" type="line" padding>
+        <text class="uni-subtitle"></text>
         <uni-easyinput
           class="uni-mt-5"
           trim="all"
@@ -40,8 +38,7 @@
         ></uni-easyinput>
       </uni-section>
       <!-- 专业 -->
-      <uni-section title="marjor" type="line" padding>
-        <text class="uni-subtitle">专业：</text>
+      <uni-section title="专业" type="line" padding>
         <uni-easyinput
           class="uni-mt-5"
           trim="all"
@@ -51,8 +48,7 @@
         ></uni-easyinput>
       </uni-section>
       <!-- 城市 -->
-      <uni-section title="city" type="line" padding>
-        <text class="uni-subtitle">城市：</text>
+      <uni-section title="城市" type="line" padding>
         <uni-easyinput
           class="uni-mt-5"
           trim="all"
@@ -61,6 +57,11 @@
           @input="input"
         ></uni-easyinput>
       </uni-section>
+      <!-- 提交，保存 -->
+      <view class="buttons"
+        ><button type="primary" @click="save(valiForm)">保存</button>
+        <button type="primary" @click="submit(valiForm)">提交</button></view
+      >
     </form>
   </view>
 </template>
@@ -81,21 +82,12 @@ export default {
     }
   },
   methods: {
-    formSubmit: function (e) {
-      // console.log('form发生了submit事件，携带数据为：' + JSON.stringify(e.detail.value))
-      // var formdata = e.detail.value
-      // uni.showModal({
-      // 	content: '表单数据内容：' + JSON.stringify(formdata),
-      // 	showCancel: false
-      // });
+    save (valiForm) {
+      // 保存数据
     },
-    formReset: function (e) {
-      // console.log('清空数据')
+    submit (valiForm) {
+      // 提交数据
     },
-    // bindPickerChange: function(e) {
-    // 	// console.log('picker发送选择改变，携带值为', e.detail.value);
-    // 	this.index = e.detail.value;
-    // },
     input (e) {
       console.log('输入内容：', e)
     },
@@ -112,8 +104,14 @@ export default {
   margin-top: 15rpx;
   margin-bottom: 15rpx;
 }
-.uni-form {
+.buttons {
   display: flex;
-  margin: 15px;
+}
+button {
+  margin: 0 20rpx;
+  flex: 1;
+}
+.theme {
+  margin: 15rpx;
 }
 </style>
