@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <container title="简历修改" rightText="确认">
+    <topBack title="简历修改" rightText="确认">
       <theme
         :title="item1.title"
         :content="item1.content"
@@ -29,17 +29,17 @@
         :job="item4.job"
         :time="item4.time"
       />
-    </container>
+    </topBack>
   </div>
 </template>
 
 <script>
 import theme from '../theme/index.vue'
-import container from '../container/index.vue'
+import topBack from '../topBack/index.vue'
 export default {
   components: {
     theme,
-    container
+    topBack
   },
   data () {
     return {

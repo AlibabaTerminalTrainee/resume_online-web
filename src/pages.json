@@ -3,7 +3,49 @@
     {
       "path": "pages/Home/index",
       "style": {
-        "navigationBarTitleText": "Home"
+        "navigationBarTitleText": "静态组件测试"
+      }
+    },
+    {
+      "path": "components/themeContainer/index",
+      "style": {
+        "navigationBarTitleText": "themeContainer 组件"
+      }
+    },
+    {
+      "path": "components/topBack/index",
+      "style": {
+        "navigationBarTitleText": "topBack 组件"
+      }
+    },
+    {
+      "path": "components/experience/index",
+      "style": {
+        "navigationBarTitleText": "experience 组件"
+      }
+    },
+    {
+      "path": "components/theme/index",
+      "style": {
+        "navigationBarTitleText": "theme 组件"
+      }
+    },
+    {
+      "path": "components/schoolTimePicker/index",
+      "style": {
+        "navigationBarTitleText": "schoolTimePicker 组件"
+      }
+    },
+    {
+      "path": "components/description/index",
+      "style": {
+        "navigationBarTitleText": "description 组件"
+      }
+    },
+    {
+      "path": "components/formEditor/index",
+      "style": {
+        "navigationBarTitleText": "formEditor 组件"
       }
     }
   ],
